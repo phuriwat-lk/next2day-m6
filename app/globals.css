@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gray-400
+}
+
+.menu {
+  @apply py-4 bg-green-200
+}
+
+.menu a {
+  @apply px-2 font-bold hover:underline hover:text-green-600
+}
+
+.btn {
+  @apply bg-purple-600 text-white rounded-full px-5 py-3 shadow-2xl hover:bg-purple-800 hover:font-bold hover:underline hover:text-gray-300
+}
+
+.btn-alert {
+  @apply bg-red-600 text-white rounded-md px-5 py-3 shadow-2xl 
+}
+
+input {
+  @apply border-1 border-gray-400 p-2 rounded-lg shadow-lg
+}
+
+table {
+  @apply w-full
+}
+
+table thead tr th {
+  @apply bg-blue-400 p-2 text-center border-l-2 border-r-2 border-gray-100
+}
+
+table tbody tr td {
+  @apply p-2 border-1 border-b-gray-400 border-t-0 border-l-0 border-r-0 bg-blue-100
+}
