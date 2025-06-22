@@ -19,7 +19,7 @@ export default function SignIn() {
   };
 
   const showSuccess = async () => {
-    const button = await Swal.fire({
+    await Swal.fire({
       title: "Status-Login",
       text: `Username :  ${username} , Password : ${password}`,
       icon: "success", // success ,info , error , warning, question
@@ -27,7 +27,7 @@ export default function SignIn() {
   };
   
   const showAlert = async () => {
-    const button = await Swal.fire({
+    await Swal.fire({
       title: "Status-Login",
       text: "กรุณากรอกข้อมูลให้ครบถ้วน",
       icon: "warning", // success ,info , error , warning, question
