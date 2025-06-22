@@ -3,11 +3,11 @@ import { PrismaClient } from "../../../../../generated/prisma"
 
 const prisma = new PrismaClient()
 
-export async function PUT(req:NextRequest,{params}:{params:{id:string}}) {
+export async function PUT(req:NextRequest,{params}:{params:Promise<{id:string}>}) {
 
     try {
 
-        const {id} = params
+        const {id} = await params
         const {name,price} = await req.json()
 
         await prisma.product.update({

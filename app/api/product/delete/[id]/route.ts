@@ -3,11 +3,11 @@ import { PrismaClient } from "../../../../../generated/prisma"
 
 const prisma = new PrismaClient()
 
-export async function DELETE(req:NextRequest,{params} : {params:{id:string}}) {
+export async function DELETE(req:NextRequest,{params} : {params:Promise<{id:string}>}) {
 
     try {
 
-        const {id} = params
+        const {id} = await params
 
         await prisma.product.delete({
             where:{
